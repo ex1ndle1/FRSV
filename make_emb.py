@@ -2,14 +2,14 @@ import cv2
 from insightface.app import FaceAnalysis
 import numpy as np
 
-from main import cur,conn
+from db_settings import cur,conn
 
 app = FaceAnalysis()
 app.prepare(ctx_id=-1)  
 
 
 
-name  ='Muhammadsafo'
+name  ='Muhammadsafo' 
 
 img = cv2.imread(f"images/{name}.jpg")  
 faces = app.get(img)
