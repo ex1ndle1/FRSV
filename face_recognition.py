@@ -4,7 +4,7 @@ from insightface.app import FaceAnalysis
 from ultralytics import YOLO
 import time
 
-from main import cur
+from db_settings import cur
 
 
 
@@ -51,11 +51,9 @@ last_recognition_result = None
 recognition_active = False
 
 def is_bbox_in_zone(bbox, zone):
-    """Проверяет, находится ли bbox в центральной зоне"""
+   
     x1, y1, x2, y2 = bbox
     zx1, zy1, zx2, zy2 = zone
-    
-    # Центр bbox
     center_x = (x1 + x2) / 2
     center_y = (y1 + y2) / 2
     
