@@ -1,9 +1,8 @@
 from django import forms
-from .models import People
+from .models import PeopleEmb
 
 class RegisterForm(forms.Form):
-    image = forms.ImageField(required=True)
-    name  = forms.CharField(required=True,)
+
     class Meta:
-        model = People
+        model = PeopleEmb
         fields = ['image', 'name', 'last_name']

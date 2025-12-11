@@ -8,10 +8,10 @@ def register(request):
         form = RegisterForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return redirect(request , 'frsv:index')
+            return redirect( 'frsv:index')
         
 
     else:
         form = RegisterForm()
-
+    return render(request, 'frsv/register.html', {'form':form})
     

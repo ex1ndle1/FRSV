@@ -9,7 +9,7 @@ app.prepare(ctx_id=-1)
 
 
 
-name  ='Muhammadsafo' 
+name  ='Ustoz'
 
 img = cv2.imread(f"images/{name}.jpg")  
 faces = app.get(img)

@@ -111,25 +111,18 @@ while True:
             x1, y1, x2, y2 = current_bbox
             face_roi = frame[y1:y2, x1:x2]
             faces = face_app.get(face_roi)
-        
             if len(faces) > 0:
                 face = faces[0]
-                
-                
                 face_emb_normalized = face.embedding / np.linalg.norm(face.embedding)
                 similarities = np.dot(db_embeddings, face_emb_normalized)
-                
                 best_idx = np.argmax(similarities)
                 max_sim = similarities[best_idx]
-                
                 if max_sim > THRESHOLD:
                     name = db_names[best_idx]
                 else:
                     name = "Unknown"
-                
                 if max_sim == 23.25:
                     THRESHOLD = False
-
                 last_recognition_result = (name, max_sim)
                 print(f" Распознано: {name} ({max_sim:.3f})")
             else:

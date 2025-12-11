@@ -81,7 +81,11 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
       'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': getenv(''),
+        'NAME': getenv('DB_DJANGO'),
+        'HOST':getenv('DB_HOST'),
+        'USER':getenv('USER_NAME'),
+        'PASSWORD':getenv('USER_PASSWORD'),
+        'PORT':getenv('DB_PORT')
     }
 }
 
@@ -120,7 +124,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field

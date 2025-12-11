@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+
+
+
+<body>
+
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <label for="id_name">Name:</label><br>
+    <input type="text" name="name" id="id_name" required><br><br>
+
+    <label for="id_last_name">Last Name:</label><br>
+    <input type="text" name="last_name" id="id_last_name" required><br><br>
+
+    <label for="id_image">Image:</label><br>
+    <input type="file" name="image" id="id_image" required><br><br>
+
+    <button type="submit">Register</button>
+
+</form>
+
+
+
+    </form>
+</body>
+</html>

@@ -10,5 +10,10 @@ class People(models.Model):
      last_name = models.CharField(max_length=25)
      role = models.CharField(default='student')
 
-    
+     
 
+
+class PeopleEmb(models.Model):
+    
+     name = models.CharField(max_length=240)
+     vector = models.BinaryField(default=0)
