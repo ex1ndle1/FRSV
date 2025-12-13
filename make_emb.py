@@ -9,12 +9,13 @@ app.prepare(ctx_id=-1)
 
 
 
-name  ='Ustoz'
+name  ='Alexandr'
 
-img = cv2.imread(f"images/{name}.jpg")  
+img = cv2.imread(r"D:\FRSV\media\images\Без_названия_3.jpg")  
 faces = app.get(img)
 face = faces[0]
 embedding = face.embedding 
+
 
 
 emb_bytes = embedding.tobytes()

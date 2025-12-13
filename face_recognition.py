@@ -16,9 +16,6 @@ yolo_model = YOLO('yolov8n.pt')
 emb_folder = "embadings"
 
 
-
-
-
 face_db = {
 
 }
@@ -105,7 +102,7 @@ while True:
                    (zone_x1, zone_y2 + 50),
                    cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 255, 255), 2)
         
-      
+    
         if elapsed >= DWELL_TIME and not recognition_active:
             recognition_active = True
             x1, y1, x2, y2 = current_bbox

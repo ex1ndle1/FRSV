@@ -1,8 +1,8 @@
 from django import forms
 from .models import PeopleEmb
 
-class RegisterForm(forms.Form):
+class RegisterForm(forms.ModelForm):
 
     class Meta:
         model = PeopleEmb
-        fields = ['image', 'name', 'last_name']
+        fields = ['name','image']
