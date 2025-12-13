@@ -16,7 +16,7 @@ class People(models.Model):
 
 
 class PeopleEmb(models.Model):
-     image = models.ImageField(upload_to='images/', blank=True, null = True)
+     image = models.ImageField(upload_to='images/', blank=True, null = True, unique=True)
      name = models.CharField(max_length=240)
      vector = models.BinaryField(default=0)
  

@@ -1,2 +1,4 @@
 import os
-print(os.listdir(r"D:\FRSV\media\images"))
+
+if os.path.exists(r"D:\FRSV\media\images\Без_названия_3_p6tiwhK.jpg"):
+    print(True)

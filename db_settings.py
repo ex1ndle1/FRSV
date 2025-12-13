@@ -8,7 +8,7 @@ db_user = getenv('USER_NAME')
 user_password = getenv('USER_PASSWORD')
 db_host = getenv('DB_HOST')
 db_port = getenv('DB_PORT')
-db_name = getenv('DB_NAME')
+db_name = getenv('DB_DJANGO')
 
 
 

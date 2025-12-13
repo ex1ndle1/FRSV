@@ -1,28 +1,29 @@
-
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="{% static 'frsv/css/style.css%}">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>People</title>
+
+
 </head>
 <body>
 
-    {% for data in datas %}
-        <div>
-            <h1>{{ data.name }}</h1>
-           
-            {% if data.image  %}
-             <img src="{{ data.image.url }}" alt="{{ data.name }}">
-            
-            {% else %}
-             <img src="/media/images/default.jpg" alt="guest">
-           {% endif %}
-            
-        </div>
-    {% endfor %}
+    <div class="grid">
+        {% for data in datas %}
+            <div class="card">
+                {% if data.image %}
+                    <img class="avatar" src="{{ data.image.url }}" alt="{{ data.name }}">
+                {% else %}
+                    <img class="avatar empty" src="/media/images/default.png" alt="guest">
+                {% endif %}
+
+                <h2>{{ data.name }}</h2>
+            </div>
+        {% endfor %}
+    </div>
 
 </body>
 </html>

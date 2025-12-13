@@ -19,7 +19,7 @@ emb_folder = "embadings"
 face_db = {
 
 }
-cur.execute('select name,vector from embedding ; ')
+cur.execute('select name,vector from frsv_peopleemb  ; ')
 datas = cur.fetchall()
 for name,vector in datas:
     emb = np.frombuffer(vector, dtype=np.float32)
@@ -60,7 +60,6 @@ while True:
     ret, frame = cap.read()
     if not ret:
         break
-    
     cv2.rectangle(frame, (zone_x1, zone_y1), (zone_x2, zone_y2), (255, 255, 0), 2)
     cv2.putText(frame, "SCAN ZONE", (zone_x1, zone_y1 - 10),
                 cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255, 255, 0), 2)
